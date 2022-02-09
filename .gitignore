@@ -70,10 +70,6 @@ jsconfig.json
 # VSCode
 # https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
 .vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 **/*.code-workspace
 
 # Typings file.
@@ -95,4 +91,3 @@ yarn-error.log*
 
 # Mac OSX Finder files.
 **/.DS_Store
-.DS_Store
