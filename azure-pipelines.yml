@@ -17,7 +17,9 @@ steps:
   inputs:
     versionSpec: '16.x'
   displayName: 'Install Node.js'
-
+- task: CmdLine@2
+  inputs:
+    script: 'echo ls'
 - task: Npm@1
   displayName: 'Install Dependencies'
   inputs:
