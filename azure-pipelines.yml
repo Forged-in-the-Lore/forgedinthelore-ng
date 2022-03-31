@@ -19,6 +19,10 @@ steps:
   displayName: 'Install Node.js'
 - task: CmdLine@2
   inputs:
+    script: 'cd 1/s/src'
+
+- task: CmdLine@2
+  inputs:
     script: 'ls'
 - task: Npm@1
   displayName: 'Install Dependencies'
