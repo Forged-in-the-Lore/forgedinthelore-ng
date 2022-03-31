@@ -13,7 +13,7 @@ variables:
   # Environment name
   environmentName: 'test'
   # Project name
-  projectName: 'forged-in-the-lore'
+  projectName: 'forgedinthelore-ng'
   # Web app name
   webAppName: 'forged-in-the-lore'
 
