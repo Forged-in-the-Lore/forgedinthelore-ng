@@ -31,7 +31,7 @@ stages:
         displayName: 'Install Node.js'
 
       - script: |
-          cd '$(Build.SourcesDirectory)/$(projectName)'
+          cd '$(Build.SourcesDirectory)'
           npm install -g @angular/cli
           npm install
           ng build --prod
