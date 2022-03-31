@@ -24,7 +24,7 @@ steps:
   displayName: 'Install Dependencies'
   inputs:
     command: 'install'
-    workingDir: 'src/forgedinthelore-ng'
+    workingDir: 'src/AngularApp'
 
 - task: Npm@1
   displayName: 'Build Angular'
