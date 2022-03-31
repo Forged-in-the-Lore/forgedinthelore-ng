@@ -31,7 +31,8 @@ steps:
     workingDir: 'src/forgedinthelore-ng'
     customCommand: 'run build'
 
-- task: PublishPipelineArtifact@0
+- task: PublishPipelineArtifact@1
+  displayName: Export
   inputs:
     artifactName: 'angular'
     targetPath: 'src/forgedinthelore-ng/dist'
