@@ -18,8 +18,8 @@ import {HasRoleDirective} from './_directives/has-role.directive';
   declarations: [
     AppComponent,
     NavComponent,
-    MatSpinnerOverlayComponent
-    // HasRoleDirective
+    MatSpinnerOverlayComponent,
+    HasRoleDirective
   ],
   imports: [
     BrowserModule,
