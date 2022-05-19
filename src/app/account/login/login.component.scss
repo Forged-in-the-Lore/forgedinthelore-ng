@@ -1,0 +1,16 @@
+.form{
+  margin: 20px;
+}
+
+.centered-column-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.centered-text {
+  text-align:center;
+  width:100%;
+  margin: 0 auto;
+}

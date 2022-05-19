@@ -35,6 +35,7 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
             "scripts": []

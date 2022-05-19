@@ -1,0 +1,21 @@
+<div class="centered-column-container">
+  <form class="form" [formGroup]="loginForm" (ngSubmit)="loginForm.valid && login()" autocomplete="off">
+    <h2 class="text-center text-primary centered-text">Sign in</h2>
+    <p class="centered-text">Already have an account? Just sign in</p>
+    <div class="row" *ngIf="validationErrors.length>0">
+      <ul class="text-danger">
+        <li *ngFor="let error of validationErrors">{{error}}</li>
+      </ul>
+    </div>
+    <app-text-input [formControl]="helper.toControl(loginForm.controls['username'])"
+                    [label]="'Username'"></app-text-input>
+    <app-text-input [formControl]="helper.toControl(loginForm.controls['password'])" [label]="'Password'"
+                    [type]="'password'"></app-text-input>
+
+    <div class="form-group text-center">
+      <button mat-raised-button color="success" [disabled]="!loginForm.valid" class="btn btn-success mr-2"
+              type="submit">Login
+      </button>
+    </div>
+  </form>
+</div>

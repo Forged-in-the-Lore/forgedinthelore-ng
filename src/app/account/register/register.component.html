@@ -1,0 +1,27 @@
+<!--suppress TypeScriptValidateTypes -->
+<div class="centered-column-container">
+  <form class="form" [formGroup]="registerForm" (ngSubmit)="registerForm.valid && register()" autocomplete="off">
+    <h2 class="text-center text-primary centered-text">Sign up</h2>
+    <p class="centered-text">First time? Create an account below</p>
+    <div class="row" *ngIf="validationErrors.length>0">
+      <ul class="text-danger">
+        <li *ngFor="let error of validationErrors">{{error}}</li>
+      </ul>
+    </div>
+    <app-text-input [formControl]="helper.toControl(registerForm.controls['username'])"
+                    [label]="'Username'"></app-text-input>
+    <app-text-input [formControl]="helper.toControl(registerForm.controls['email'])"
+                    [label]="'E-mail'"></app-text-input>
+    <app-text-input [formControl]="helper.toControl(registerForm.controls['password'])" [label]="'Password'"
+                    [type]="'password'"></app-text-input>
+    <app-text-input [formControl]="helper.toControl(registerForm.controls['confirmPassword'])"
+                    [label]="'Confirm Password'"
+                    [type]="'password'"></app-text-input>
+
+    <div class="form-group text-center centered-column-container">
+      <button mat-raised-button color="primary" [disabled]="!registerForm.valid" class="btn btn-success mr-2"
+              type="submit">Register
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,3 +1,13 @@
 <mat-toolbar>
+  <div *ngIf="accountService.currentUser$ | async as user">
+    <button mat-button [matMenuTriggerFor]="userMenu">{{user.username | titlecase}}</button>
 
+    <mat-menu #userMenu="matMenu">
+      <button (click)="logout()" mat-menu-item >
+        <mat-icon>exit</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+
+  </div>
 </mat-toolbar>

@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {MatSpinnerOverlayComponent} from "../mat-spinner-overlay/mat-spinner-overlay/mat-spinner-overlay.component";
+import {MatSpinnerOverlayComponent} from "../shared/mat-spinner-overlay/mat-spinner-overlay/mat-spinner-overlay.component";
 
 @Injectable({
   providedIn: 'root'

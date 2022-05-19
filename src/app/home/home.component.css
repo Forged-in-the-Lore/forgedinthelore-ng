@@ -1,0 +1,9 @@
+.card-holder{
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.container{
+  border-radius: 10px;
+}

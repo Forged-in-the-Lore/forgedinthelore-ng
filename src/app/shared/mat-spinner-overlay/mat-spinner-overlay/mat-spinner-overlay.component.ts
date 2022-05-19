@@ -1,7 +1,7 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {ThemePalette} from "@angular/material/core";
 import {ProgressSpinnerMode} from "@angular/material/progress-spinner";
-import {BusyService} from "../../_services/busy.service";
+import {BusyService} from "../../../_services/busy.service";
 
 //Source: https://www.angularjswiki.com/angular/creating-progress-spinner-in-angular/
 

@@ -1,9 +1,11 @@
+.card-holder{
+  flex-basis: 300px;
+  margin:20px;
+}
+
 .flex-row{
   display: flex;
   flex-direction: row;
-  align-content: center;
-}
-
-.flex-right-align{
   justify-content: center;
+  align-content: center;
 }
