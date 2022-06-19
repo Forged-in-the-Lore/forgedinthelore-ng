@@ -1,17 +1,19 @@
 import {Injectable} from '@angular/core';
-import {environment} from "../../../environments/environment";
 import {ReplaySubject} from "rxjs";
 import {User} from "../../_models/user";
 import {HttpClient} from "@angular/common/http";
 import {map, tap} from "rxjs/operators";
 import {RegisterDto} from "../../_dtos/register-dto";
 import {ToastrService} from "ngx-toastr";
+import configUrl from "../../assets/config.json";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AccountService {
-  baseUrl = environment.apiUrl;
+  config = {
+    ApiUrl: configUrl.apiServer.url,
+  };
   private currentUserSource = new ReplaySubject<User | null>(1);
   currentUser$ = this.currentUserSource.asObservable();
 
@@ -19,7 +21,7 @@ export class AccountService {
   }
 
   login(model: any) {
-    return this.http.post<User>(this.baseUrl + 'account/login', model).pipe(
+    return this.http.post<User>(this.config.ApiUrl + 'account/login', model).pipe(
       map((user: User) => {
         if (user) {
           this.setCurrentUser(user);
@@ -29,7 +31,7 @@ export class AccountService {
   }
 
   register(model: RegisterDto) {
-    return this.http.post(this.baseUrl + 'account/register', model).pipe(
+    return this.http.post(this.config.ApiUrl + 'account/register', model).pipe(
       tap(_ => {
         this.toastr.success("Registration successful. Please sign in");
       }))
